@@ -58,3 +58,7 @@ This is a functional user-interface prototype, not a secure or legally verified 
 - Review blocks finalization if required acknowledgments, initials, signatures, or evaluation items are missing, or if No/Needs Improvement ratings remain unresolved.
 - Print / Save as PDF from the summary includes the score and trainee initials. Browser print dialog must be used to save the PDF.
 - No real time backend, login security or audit trail is provided in this version.
+
+
+## v2.3 — Reach chart equipment dropdown
+The first-page pump size/class dropdown now uses the equipment labels on pumppartners.com/reach-charts/ (checked November 2026) plus the requested 33 M option. Other setup and evaluation behaviors are unchanged.
