@@ -62,3 +62,6 @@ This is a functional user-interface prototype, not a secure or legally verified 
 
 ## v2.3 — Reach chart equipment dropdown
 The first-page pump size/class dropdown now uses the equipment labels on pumppartners.com/reach-charts/ (checked November 2026) plus the requested 33 M option. Other setup and evaluation behaviors are unchanged.
+
+## Version 2.4 UI update
+Blue, white and gray color palette inspired by pumppartners.com. Rating dropdowns show green for favorable results (Yes, Proficient, Pass) and red for unfavorable (No, Needs improvement, Fail). The cell-phone-used field is reversed: No is green; Yes is red. Acknowledgment dropdowns stay neutral blue/gray. No evaluation logic was changed.
