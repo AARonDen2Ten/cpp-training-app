@@ -1,10 +1,10 @@
-# Concrete Pump Partners — Interactive Operator Training (Prototype v2)
+# Concrete Pump Partners — Interactive Operator Training (Prototype v2.2)
 
 ## What works now
 - Trainer and trainee role views, with one-device handoff mode.
 - Full nine-page evaluation structure: road test, pump controls, jobsite operation, procedural review, and individually acknowledged safety checklist.
-- Trainer Yes/No and Proficient/Needs Improvement, re-evaluation status and date, comments, road test result.
-- Trainee acknowledgment for each safety statement and separate drawn trainer / trainee signatures.
+- Trainer dropdowns for Yes/No and Proficient/Needs Improvement, re-evaluation status and date, comments, road test result.
+- Trainee acknowledgment dropdown plus required initials for each final-procedure and safety statement and separate drawn trainer / trainee signatures.
 - Automatic browser-local saving, same-browser multi-tab updates, JSON export/import, print-to-PDF report, and installation-ready PWA.
 - Optional cross-device synchronization through a Supabase backend (requires configuration).
 
@@ -44,3 +44,17 @@ create policy "pilot edit" on public.training_sessions for update to anon using 
 
 ## What this is not
 This is a functional user-interface prototype, not a secure or legally verified training record system. Local browser storage is not a durable employee records database. It should not be used to attest training completion or compliance until the production security and review work has been completed.
+
+## Version 2.1 setup changes
+- License class dropdown: Class A / Class B / Permit; separate license expiration date picker.
+- Equipment type, pump size (20–65 meters), manufacturer dropdowns.
+- Unit selector with Add unit button. Unit numbers are stored in this browser, not centrally; configure a shared fleet catalog before production.
+- Existing local evaluation records are retained; printouts include new equipment details.
+
+## Version 2.2 evaluation changes
+- Native dropdowns for road test, yard controls, and jobsite evaluation rows.
+- Final procedures and safety acknowledgment rows require BOTH Acknowledged and typed initials, entered in trainee mode.
+- Final review includes a computed provisional score: passing Yes/Proficient items divided by all road, controls, and jobsite evaluation items (completed Proficient re-evaluations count as passing). This percentage is **not** an approved pass threshold.
+- Review blocks finalization if required acknowledgments, initials, signatures, or evaluation items are missing, or if No/Needs Improvement ratings remain unresolved.
+- Print / Save as PDF from the summary includes the score and trainee initials. Browser print dialog must be used to save the PDF.
+- No real time backend, login security or audit trail is provided in this version.
